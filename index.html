@@ -966,7 +966,7 @@ function collectData() {
 async function submitForm() {
   const data = collectData();
   if (SHEETS_URL) {
-    try { await fetch(SHEETS_URL, {method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}); }
+    try { await fetch(SHEETS_URL, {method:'POST',mode:'text/plain',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}); }
     catch(e) { console.warn('Sheets note:', e); }
   }
   document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
@@ -1146,3 +1146,4 @@ window.addEventListener('DOMContentLoaded', initSplash);
 </script>
 </body>
 </html>
+F
