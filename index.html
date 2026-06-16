@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +17,8 @@
   --gold-dim:#6A4E18;
   --gold-glow:rgba(210,155,55,0.18);
   --text:#EDE0C8;
-  --text-muted:#C4A870;
-  --text-soft:#A88C5A;
+  --text-muted:#E4D3A6;
+  --text-soft:#C6AD78;
   --border:rgba(201,148,58,0.32);
   --border-active:rgba(232,187,90,0.75);
   --input-bg:rgba(255,248,235,0.055);
@@ -256,7 +257,7 @@
 }
 
 /* ═══════════════════ BASE ═══════════════════ */
-html,body{min-height:100%;font-family:'Crimson Pro',Georgia,serif;font-size:17px;}
+html,body{min-height:100%;font-family:Georgia,'Times New Roman',serif;font-size:17px;}
 body{
   background-color:#070604;
   background-image:
@@ -287,7 +288,7 @@ body::after{
 .hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,6,4,0.1) 0%,rgba(7,6,4,0.0) 28%,rgba(7,6,4,0.65) 78%,rgba(7,6,4,1.0) 100%);}
 .hero-text{position:absolute;bottom:0;left:0;right:0;text-align:center;padding:0 20px 36px;}
 .form-title{font-family:'Playfair Display',Georgia,serif;font-size:clamp(2.4rem,6vw,3.5rem);font-weight:700;color:var(--gold-pale);letter-spacing:0.04em;line-height:1.1;text-shadow:0 2px 24px rgba(0,0,0,0.9),0 0 60px rgba(180,120,30,0.3);margin-bottom:9px;}
-.form-subtitle{font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(245,223,160,0.78);font-size:1.1rem;letter-spacing:0.1em;text-shadow:0 1px 8px rgba(0,0,0,0.9);}
+.form-subtitle{font-family:Georgia,'Times New Roman',serif;font-style:normal;color:rgba(245,223,160,0.9);font-size:1.05rem;letter-spacing:0.06em;text-shadow:0 1px 8px rgba(0,0,0,0.9);}
 .gold-rule{width:140px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:16px auto 0;}
 
 /* PROGRESS */
@@ -306,7 +307,7 @@ body::after{
 .step.active{display:block;animation:fadeSlide 0.45s cubic-bezier(0.4,0,0.2,1);}
 @keyframes fadeSlide{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
 .step-title{font-family:'Playfair Display',serif;font-size:1.65rem;font-weight:600;color:var(--gold-pale);margin-bottom:11px;}
-.step-desc{color:var(--text-muted);font-size:1.04rem;line-height:1.78;margin-bottom:28px;font-style:italic;}
+.step-desc{color:var(--text-muted);font-size:1.04rem;line-height:1.72;margin-bottom:28px;font-style:normal;}
 .gold-divider{height:1px;background:linear-gradient(90deg,rgba(201,148,58,0.5),transparent);margin-bottom:30px;}
 
 /* FIELDS */
@@ -314,7 +315,7 @@ body::after{
 .field label{display:block;font-size:1.02rem;color:var(--text);margin-bottom:10px;letter-spacing:0.02em;line-height:1.5;}
 .field label .req{color:var(--gold);margin-left:3px;}
 .field label .opt{color:var(--text-soft);font-size:0.85rem;margin-left:5px;font-style:italic;}
-input[type=text],input[type=email],select,textarea{width:100%;background:var(--input-bg);border:1px solid var(--border);border-radius:2px;padding:13px 16px;color:var(--text);font-family:'Crimson Pro',serif;font-size:1.06rem;transition:border-color 0.2s,box-shadow 0.25s;-webkit-appearance:none;appearance:none;}
+input[type=text],input[type=email],select,textarea{width:100%;background:var(--input-bg);border:1px solid var(--border);border-radius:2px;padding:13px 16px;color:var(--text);font-family:Georgia,'Times New Roman',serif;font-size:1.06rem;transition:border-color 0.2s,box-shadow 0.25s;-webkit-appearance:none;appearance:none;}
 input[type=text]:focus,input[type=email]:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 2px rgba(201,148,58,0.12),0 0 16px rgba(201,148,58,0.07);}
 textarea{resize:vertical;min-height:108px;}
 select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M0 0l6 8 6-8z' fill='%23C9943A'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px;cursor:pointer;}
@@ -368,6 +369,8 @@ select option{background:#1a1208;color:var(--text);}
 .schedule-week-title{font-family:'Playfair Display',serif;font-size:1.12rem;color:var(--gold-pale);margin-bottom:15px;padding-bottom:10px;border-bottom:1px solid var(--border);}
 .sched-scroll{overflow-x:auto;margin-bottom:8px;-webkit-overflow-scrolling:touch;}
 .sched-table{border-collapse:collapse;min-width:650px;width:100%;}
+.schedule-section.short-week .sched-table{min-width:420px;}
+.schedule-section.mid-week .sched-table{min-width:520px;}
 .sched-table th{padding:9px 5px;font-family:'Playfair Display',serif;font-size:0.78rem;font-weight:600;color:var(--gold);text-align:center;white-space:nowrap;border-bottom:1px solid var(--border);}
 .sched-table th.time-col{color:var(--text-soft);text-align:left;padding-left:2px;min-width:84px;}
 .sched-table td{padding:3px 3px;text-align:center;border-bottom:1px solid rgba(201,148,58,0.06);}
@@ -412,7 +415,7 @@ select option{background:#1a1208;color:var(--text);}
 .confirm-appreciation::before{content:'';position:absolute;top:-1px;left:50%;width:min(420px,82vw);height:1px;transform:translateX(-50%);background:linear-gradient(90deg,transparent,var(--gold-bright),transparent);box-shadow:0 0 22px rgba(232,187,90,0.35);}
 .appreciation-kicker{font-family:'Cormorant Garamond',serif;font-size:0.8rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(201,148,58,0.62);margin-bottom:9px;}
 .confirm-appreciation .dedication-name{display:block;font-size:clamp(1.65rem,4.6vw,3rem);margin-bottom:14px;}
-.appreciation-copy{color:rgba(245,223,160,0.76);font-size:1.08rem;line-height:1.78;max-width:590px;margin:0 auto;font-style:italic;}
+.appreciation-copy{color:rgba(245,223,160,0.86);font-size:1.08rem;line-height:1.72;max-width:590px;margin:0 auto;font-style:normal;}
 .appreciation-links{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:22px;}
 .appreciation-links a{border:1px solid rgba(201,148,58,0.42);border-radius:2px;padding:9px 16px;color:var(--gold-pale);text-decoration:none;font-family:'Playfair Display',serif;font-size:0.92rem;letter-spacing:0.06em;background:rgba(201,148,58,0.06);transition:all 0.25s;}
 .appreciation-links a:hover{border-color:var(--gold-bright);background:rgba(201,148,58,0.14);box-shadow:0 0 18px rgba(201,148,58,0.18);}
@@ -508,7 +511,7 @@ select option{background:#1a1208;color:var(--text);}
     <!-- ══ STEP 1: PARTICIPANT INFO ══ -->
     <div class="step active" id="step1">
       <div class="step-title">Welcome</div>
-      <p class="step-desc">This is a structured restorative circle focused on reflection, connection, and shared meaning-making. This series is an evolving space where participants can explore what it means to rebuild, adapt, and grow following significant life disruption, trauma, or transition. This space is grounded in the restorative justice principle that turmoil, rupture, and hardship can become catalysts for profound personal transformation when held within a safe, intentional community. Participation here is entirely voluntary, self-paced, and guided by your own capacity. This circle is not a process for clinical diagnosis or treatment assessment, but a restorative practice for mutual presence, authentic dialogue, and witnessing one another's humanity and growth over time.</p>
+      <p class="step-desc">This is a structured restorative circle focused on reflection, connection, and shared meaning-making. You do not need to have participated in anything like this before. The space will be co-created with the people who join it: we will move at a careful pace, listen with respect, and shape the experience together. This series is an evolving space where participants can explore what it means to rebuild, adapt, and grow following significant life disruption, trauma, or transition. New opportunities, relationships, and experiences can be created from meeting in this space with care. Participation is entirely voluntary, self-paced, and guided by your own capacity. This circle is not a process for clinical diagnosis or treatment assessment, but a restorative practice for mutual presence, authentic dialogue, and witnessing one another's humanity and growth over time.</p>
       <div class="gold-divider"></div>
       <div class="step-title" style="font-size:1.25rem;margin-bottom:22px;">Participant Info</div>
 
@@ -718,12 +721,12 @@ select option{background:#1a1208;color:var(--text);}
 
     <!-- ══ STEP 6: SCHEDULING ══ -->
     <div class="step" id="step6">
-      <div class="step-title">First Meeting — Availability</div>
-      <p class="step-desc">Please indicate your availability for the last two weeks of June by selecting all time slots that work for you. All times are in your local time zone. Click any cell to toggle it on or off.</p>
+      <div class="step-title">First Meeting &mdash; Availability</div>
+      <p class="step-desc">Please indicate your availability for Friday, July 10 through Friday, July 24, 2026 by selecting all time slots that work for you. All times are in your local time zone. Click any cell to toggle it on or off.</p>
       <div class="gold-divider"></div>
 
-      <div class="schedule-section">
-        <div class="schedule-week-title">Week of June 22nd &nbsp;·&nbsp; June 22–28, 2025</div>
+      <div class="schedule-section short-week">
+        <div class="schedule-week-title">Opening Weekend &nbsp;&middot;&nbsp; July 10&ndash;12, 2026</div>
         <div class="select-all-row">
           <button class="sel-all-btn" type="button" onclick="selectAllWeek('w1')">Select All</button>
           <button class="sel-all-btn" type="button" onclick="clearWeek('w1')">Clear All</button>
@@ -736,13 +739,9 @@ select option{background:#1a1208;color:var(--text);}
             <thead>
               <tr>
                 <th class="time-col">Time</th>
-                <th>Sun<br><small style="font-weight:300;color:var(--text-muted)">6/22</small></th>
-                <th>Mon<br><small style="font-weight:300;color:var(--text-muted)">6/23</small></th>
-                <th>Tue<br><small style="font-weight:300;color:var(--text-muted)">6/24</small></th>
-                <th>Wed<br><small style="font-weight:300;color:var(--text-muted)">6/25</small></th>
-                <th>Thu<br><small style="font-weight:300;color:var(--text-muted)">6/26</small></th>
-                <th>Fri<br><small style="font-weight:300;color:var(--text-muted)">6/27</small></th>
-                <th>Sat<br><small style="font-weight:300;color:var(--text-muted)">6/28</small></th>
+                <th>Fri<br><small style="font-weight:300;color:var(--text-muted)">7/10</small></th>
+                <th>Sat<br><small style="font-weight:300;color:var(--text-muted)">7/11</small></th>
+                <th>Sun<br><small style="font-weight:300;color:var(--text-muted)">7/12</small></th>
               </tr>
             </thead>
             <tbody id="tbody_w1"></tbody>
@@ -752,7 +751,7 @@ select option{background:#1a1208;color:var(--text);}
       </div>
 
       <div class="schedule-section">
-        <div class="schedule-week-title">Week of June 28th &nbsp;·&nbsp; June 29–July 5, 2025</div>
+        <div class="schedule-week-title">Week of July 13 &nbsp;&middot;&nbsp; July 13&ndash;19, 2026</div>
         <div class="select-all-row">
           <button class="sel-all-btn" type="button" onclick="selectAllWeek('w2')">Select All</button>
           <button class="sel-all-btn" type="button" onclick="clearWeek('w2')">Clear All</button>
@@ -765,16 +764,43 @@ select option{background:#1a1208;color:var(--text);}
             <thead>
               <tr>
                 <th class="time-col">Time</th>
-                <th>Sun<br><small style="font-weight:300;color:var(--text-muted)">6/29</small></th>
-                <th>Mon<br><small style="font-weight:300;color:var(--text-muted)">6/30</small></th>
-                <th>Tue<br><small style="font-weight:300;color:var(--text-muted)">7/1</small></th>
-                <th>Wed<br><small style="font-weight:300;color:var(--text-muted)">7/2</small></th>
-                <th>Thu<br><small style="font-weight:300;color:var(--text-muted)">7/3</small></th>
-                <th>Fri<br><small style="font-weight:300;color:var(--text-muted)">7/4</small></th>
-                <th>Sat<br><small style="font-weight:300;color:var(--text-muted)">7/5</small></th>
+                <th>Mon<br><small style="font-weight:300;color:var(--text-muted)">7/13</small></th>
+                <th>Tue<br><small style="font-weight:300;color:var(--text-muted)">7/14</small></th>
+                <th>Wed<br><small style="font-weight:300;color:var(--text-muted)">7/15</small></th>
+                <th>Thu<br><small style="font-weight:300;color:var(--text-muted)">7/16</small></th>
+                <th>Fri<br><small style="font-weight:300;color:var(--text-muted)">7/17</small></th>
+                <th>Sat<br><small style="font-weight:300;color:var(--text-muted)">7/18</small></th>
+                <th>Sun<br><small style="font-weight:300;color:var(--text-muted)">7/19</small></th>
               </tr>
             </thead>
             <tbody id="tbody_w2"></tbody>
+          </table>
+        </div>
+        <div class="sched-note">* All times in your local time zone</div>
+      </div>
+
+      <div class="schedule-section mid-week">
+        <div class="schedule-week-title">Week of July 20 &nbsp;&middot;&nbsp; July 20&ndash;24, 2026</div>
+        <div class="select-all-row">
+          <button class="sel-all-btn" type="button" onclick="selectAllWeek('w3')">Select All</button>
+          <button class="sel-all-btn" type="button" onclick="clearWeek('w3')">Clear All</button>
+          <button class="sel-all-btn" type="button" onclick="selectPeriod('w3','morning')">All Mornings</button>
+          <button class="sel-all-btn" type="button" onclick="selectPeriod('w3','afternoon')">All Afternoons</button>
+          <button class="sel-all-btn" type="button" onclick="selectPeriod('w3','evening')">All Evenings</button>
+        </div>
+        <div class="sched-scroll">
+          <table class="sched-table">
+            <thead>
+              <tr>
+                <th class="time-col">Time</th>
+                <th>Mon<br><small style="font-weight:300;color:var(--text-muted)">7/20</small></th>
+                <th>Tue<br><small style="font-weight:300;color:var(--text-muted)">7/21</small></th>
+                <th>Wed<br><small style="font-weight:300;color:var(--text-muted)">7/22</small></th>
+                <th>Thu<br><small style="font-weight:300;color:var(--text-muted)">7/23</small></th>
+                <th>Fri<br><small style="font-weight:300;color:var(--text-muted)">7/24</small></th>
+              </tr>
+            </thead>
+            <tbody id="tbody_w3"></tbody>
           </table>
         </div>
         <div class="sched-note">* All times in your local time zone</div>
@@ -797,13 +823,13 @@ select option{background:#1a1208;color:var(--text);}
         This series is intentionally being kept relatively small to help support a grounded, respectful, and relational environment. If you have any immediate questions, accessibility needs, or scheduling concerns before then, please feel free to reach out.<br><br>
         Thank you again for your interest in <em>Beyond the Breaking Point</em>.
       </div>
-      <div class="confirm-appreciation" aria-label="Appreciation for Shasta Groene Alvarez">
+      <div class="confirm-appreciation" aria-label="Appreciation for Shasta Groene">
         <div class="appreciation-kicker">Dedicated to and inspired by</div>
-        <div class="dedication-name">Shasta Groene Alvarez</div>
+        <div class="dedication-name">Shasta Groene</div>
         <p class="appreciation-copy">This circle holds deep appreciation for the courage, voice, and hard-won light Shasta has shared publicly. The golden repair imagery here is offered as a small tribute to endurance, dignity, and the possibility of returning to the self with tenderness.</p>
         <div class="appreciation-links">
           <a href="https://www.youtube.com/watch?v=Upqq_CoxS2M&amp;pp=ygUNc2hhc3RhIGdyb2VuZQ%3D%3D" target="_blank" rel="noopener">Video Inspiration</a>
-          <a href="https://books.google.com/books/about/Out_of_the_Woods.html?id=3wfy0AEACAAJ" target="_blank" rel="noopener">Out of the Woods</a>
+          <a href="https://www.amazon.com/gp/search?index=books&amp;keywords=9781662522420" target="_blank" rel="noopener">Out of the Woods on Amazon</a>
         </div>
       </div>
     </div>
@@ -814,7 +840,7 @@ select option{background:#1a1208;color:var(--text);}
 
   <div class="page-attribution">
     <span>Dedicated to and inspired by</span>
-    <span class="dedication-name">Shasta Groene Alvarez</span>
+    <span class="dedication-name">Shasta Groene</span>
     <small>With gratitude for her courage, voice, and light</small>
   </div>
 </div>
@@ -823,6 +849,7 @@ select option{background:#1a1208;color:var(--text);}
 let SHEETS_URL = 'https://script.google.com/macros/s/AKfycby9AUyamLm3fU024ZFS58PKGYOD-rRIj9crxKI0FiZJW6ieMMLBFcT8N7I2x_PBv0uY0Q/exec';
 const SUBMISSION_ID = (window.crypto && window.crypto.randomUUID) ? window.crypto.randomUUID() : `bbp-${Date.now()}-${Math.random().toString(36).slice(2)}`;
 let isSubmitting = false;
+let submitPromise = null;
 
 let currentStep = 1;
 const TOTAL_STEPS = 6;
@@ -831,8 +858,9 @@ const agreeVals = {ag1:false,ag2:false,ag3:false,ag4:false};
 
 // TIME SLOTS
 const TIME_SLOTS = [{label:"8:30 AM",period:"morning"},{label:"9:00 AM",period:"morning"},{label:"9:30 AM",period:"morning"},{label:"10:00 AM",period:"morning"},{label:"10:30 AM",period:"morning"},{label:"11:00 AM",period:"morning"},{label:"11:30 AM",period:"morning"},{label:"12:00 PM",period:"afternoon"},{label:"12:30 PM",period:"afternoon"},{label:"1:00 PM",period:"afternoon"},{label:"1:30 PM",period:"afternoon"},{label:"2:00 PM",period:"afternoon"},{label:"2:30 PM",period:"afternoon"},{label:"3:00 PM",period:"afternoon"},{label:"3:30 PM",period:"afternoon"},{label:"4:00 PM",period:"afternoon"},{label:"4:30 PM",period:"afternoon"},{label:"5:00 PM",period:"evening"},{label:"5:30 PM",period:"evening"},{label:"6:00 PM",period:"evening"},{label:"6:30 PM",period:"evening"},{label:"7:00 PM",period:"evening"},{label:"7:30 PM",period:"evening"}];
-const DAYS_W1 = ['Sun 6/22','Mon 6/23','Tue 6/24','Wed 6/25','Thu 6/26','Fri 6/27','Sat 6/28'];
-const DAYS_W2 = ['Sun 6/29','Mon 6/30','Tue 7/1','Wed 7/2','Thu 7/3','Fri 7/4','Sat 7/5'];
+const DAYS_W1 = ['Fri 7/10','Sat 7/11','Sun 7/12'];
+const DAYS_W2 = ['Mon 7/13','Tue 7/14','Wed 7/15','Thu 7/16','Fri 7/17','Sat 7/18','Sun 7/19'];
+const DAYS_W3 = ['Mon 7/20','Tue 7/21','Wed 7/22','Thu 7/23','Fri 7/24'];
 
 function buildSchedule(tbodyId, weekId, days) {
   const tbody = document.getElementById(tbodyId);
@@ -841,7 +869,7 @@ function buildSchedule(tbodyId, weekId, days) {
     if (slot.period !== lastPeriod) {
       const pr = document.createElement('tr');
       const pd = document.createElement('td');
-      pd.colSpan = 8; pd.className = 'sched-period-label';
+      pd.colSpan = days.length + 1; pd.className = 'sched-period-label';
       pd.textContent = slot.period.charAt(0).toUpperCase() + slot.period.slice(1);
       pr.appendChild(pd); tbody.appendChild(pr);
       lastPeriod = slot.period;
@@ -866,6 +894,7 @@ function buildSchedule(tbodyId, weekId, days) {
 }
 buildSchedule('tbody_w1','w1',DAYS_W1);
 buildSchedule('tbody_w2','w2',DAYS_W2);
+buildSchedule('tbody_w3','w3',DAYS_W3);
 
 function collectWeekSlots(w) {
   return Array.from(document.querySelectorAll(`.sched-cell[data-week="${w}"].on`))
@@ -935,12 +964,22 @@ function updateUI() {
   document.getElementById('progressFill').style.width=((currentStep/TOTAL_STEPS)*100)+'%';
   document.getElementById('stepLabel').textContent=`Step ${currentStep} of ${TOTAL_STEPS}`;
   document.getElementById('btnBack').style.visibility=currentStep>1?'visible':'hidden';
-  document.getElementById('btnNext').textContent=currentStep===TOTAL_STEPS?'Submit →':'Continue →';
-  document.getElementById('btnNext').disabled=false;
+  const nextButton = document.getElementById('btnNext');
+  nextButton.textContent=currentStep===TOTAL_STEPS?'Submit →':'Continue →';
+  nextButton.disabled=isSubmitting;
   document.getElementById('stepError').classList.remove('show');
   window.scrollTo({top:document.getElementById('formCard').offsetTop-20,behavior:'smooth'});
 }
-function goNext() { if(isSubmitting) return; if(!validate()) return; if(currentStep===TOTAL_STEPS){submitForm();return;} currentStep++; updateUI(); }
+function goNext() {
+  if (isSubmitting || submitPromise) return;
+  if (!validate()) return;
+  if (currentStep === TOTAL_STEPS) {
+    submitForm();
+    return;
+  }
+  currentStep++;
+  updateUI();
+}
 function goBack() { if(currentStep>1){currentStep--;updateUI();} }
 
 function collectData() {
@@ -970,29 +1009,38 @@ function collectData() {
     scale_supported: scaleVals.sq3,
     scale_systems: scaleVals.sq4,
     scale_authentic: scaleVals.sq5,
+    availability_window: 'July 10-24, 2026',
     availability_week1: collectWeekSlots('w1'),
     availability_week2: collectWeekSlots('w2'),
+    availability_week3: collectWeekSlots('w3'),
   };
 }
 
 async function submitForm() {
-  if (isSubmitting) return;
+  if (submitPromise) return submitPromise;
   isSubmitting = true;
   const submitButton = document.getElementById('btnNext');
   submitButton.disabled = true;
   submitButton.textContent = 'Sending...';
-  const data = collectData();
-  if (SHEETS_URL) {
-    try { await fetch(SHEETS_URL, {method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)}); }
-    catch(e) { console.warn('Sheets note:', e); }
-  }
-  document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
-  document.getElementById('navRow').style.display='none';
-  document.getElementById('progressFill').style.width='100%';
-  document.getElementById('stepLabel').textContent='Complete';
-  document.getElementById('stepError').classList.remove('show');
-  document.getElementById('confirmation').classList.add('active');
-  window.scrollTo({top:document.getElementById('formCard').offsetTop-20,behavior:'smooth'});
+  submitButton.setAttribute('aria-busy', 'true');
+  submitButton.style.pointerEvents = 'none';
+
+  submitPromise = (async () => {
+    const data = collectData();
+    if (SHEETS_URL) {
+      try { await fetch(SHEETS_URL, {method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)}); }
+      catch(e) { console.warn('Sheets note:', e); }
+    }
+    document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
+    document.getElementById('navRow').style.display='none';
+    document.getElementById('progressFill').style.width='100%';
+    document.getElementById('stepLabel').textContent='Complete';
+    document.getElementById('stepError').classList.remove('show');
+    document.getElementById('confirmation').classList.add('active');
+    window.scrollTo({top:document.getElementById('formCard').offsetTop-20,behavior:'smooth'});
+  })();
+
+  return submitPromise;
 }
 
 // ═══════ SPLASH LOGIC ═══════
