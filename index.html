@@ -887,7 +887,16 @@ function buildSchedule(tbodyId, weekId, days) {
 buildSchedule('tbody_w1','w1',DAYS_W1);
 buildSchedule('tbody_w2','w2',DAYS_W2);
 buildSchedule('tbody_w3','w3',DAYS_W3);
-
+// Trigger splash animation on page load
+window.addEventListener('load', function() {
+  const splash = document.getElementById('splash');
+  splash.classList.add('prelude');
+  
+  setTimeout(function() {
+    splash.classList.remove('prelude');
+    splash.classList.add('lit');
+  }, 10000);
+});
 function collectWeekSlots(w) {
   return Array.from(document.querySelectorAll(`.sched-cell[data-week="${w}"].on`))
     .map(c => `${c.dataset.day} ${c.dataset.slot}`);
