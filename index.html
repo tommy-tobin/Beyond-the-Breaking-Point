@@ -818,7 +818,7 @@ select option{background:#1a1208;color:var(--text);}
       <div class="confirm-appreciation" aria-label="Appreciation for Shasta Groene">
         <div class="appreciation-kicker">Dedicated to and inspired by</div>
         <div class="dedication-name">Shasta Groene</div>
-        <p class="appreciation-copy">This circle is offered with appreciation for the courage and honesty Shasta has shared publicly. The golden repair imagery is a small acknowledgment of endurance, dignity, and the possibility of returning to yourself with compassion.</p>
+        <p class="appreciation-copy">This circle recognizes the courage in what Shasta and many other survivors have shared publicly. The golden repair imagery is offered as a simple tribute to endurance, dignity, and returning to yourself with compassion.</p>
         <div class="appreciation-links">
           <a href="https://www.youtube.com/watch?v=Upqq_CoxS2M&amp;pp=ygUNc2hhc3RhIGdyb2VuZQ%3D%3D" target="_blank" rel="noopener">Video Inspiration</a>
           <a href="https://www.amazon.com/gp/search?index=books&amp;keywords=9781662522420" target="_blank" rel="noopener">Out of the Woods on Amazon</a>
@@ -887,16 +887,7 @@ function buildSchedule(tbodyId, weekId, days) {
 buildSchedule('tbody_w1','w1',DAYS_W1);
 buildSchedule('tbody_w2','w2',DAYS_W2);
 buildSchedule('tbody_w3','w3',DAYS_W3);
-// Trigger splash animation on page load
-window.addEventListener('load', function() {
-  const splash = document.getElementById('splash');
-  splash.classList.add('prelude');
-  
-  setTimeout(function() {
-    splash.classList.remove('prelude');
-    splash.classList.add('lit');
-  }, 10000);
-});
+
 function collectWeekSlots(w) {
   return Array.from(document.querySelectorAll(`.sched-cell[data-week="${w}"].on`))
     .map(c => `${c.dataset.day} ${c.dataset.slot}`);
